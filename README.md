@@ -49,9 +49,62 @@ The datapath and the controller of the store buffer design is in the below diagr
 ### Controllers
 
 #### LSU-STB-Controller
-
-![LSU-Controller](./docs/stb_lsu_controller.png)
+![lsu_to_buffer](https://github.com/user-attachments/assets/3197ef1a-e74b-4080-88f4-154056446670)
 
 #### STB-CACHE-Controller
+![buffer_to_cache](https://github.com/user-attachments/assets/5d749a28-e306-4a78-91a1-0f99c7d3ffc2)
 
-![LSU-Controller](./docs/stb-cache-controller.png)
+## How to Run the Store Buffer Project
+
+### Prerequisites
+- Ensure Vivado, ModelSim (for VSIM), or Icarus Verilog (for iverilog) are installed and added to your PATH.
+
+### Running Simulation in Vivado
+To simulate the store buffer project using Vivado, you can use the following make commands:
+
+1. **Compile and Elaborate:**
+   ```
+   make viv_compile
+   make viv_elaborate
+   ```
+2. **Run Simulation:**
+   ```
+   make vivado
+   ```
+3. **Open Waves:**
+   ```
+   make viv_waves
+   ```
+### Running Simulation in Modelsim
+To simulate the store buffer project using Modelsim, you can use the following make commands:
+
+1. **Compile the source files:**
+   ```
+   make vsim_compile
+   ```
+2. **Run Simulation:**
+   ```
+   make simulate
+   ```
+### Running Simulation in Iverilog
+To simulate the store buffer project using iverilog, you can use the following make commands:
+
+1. **Compile the Project:**
+   ```
+   make iverilog
+   ```
+2. **Run Simulation:**
+   ```
+   make vvp
+   ```
+3. **Open Waves through GTKWAVE:**
+   ```
+   make view_wave
+   ```
+
+### Clean Up
+To remove all generated files and reset the environment, use:
+   ```
+   make clean
+   ```
+   
